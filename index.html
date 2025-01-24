@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Kanban</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="columnas">
+        <div class="columna1" id="Pendientes">
+            <h1>Pendientes</h1>
+            <hr>
+            <div class="tareas" id="tareas"></div>
+        </div>
+
+        <div class="columna2" id="En_progreso">
+            <h1>En progreso</h1>
+            <hr>
+            <div class="tareas" id="tareas"></div>
+        </div>
+
+        <div class="columna3" id="Completadas">
+            <h1>Completadas</h1>
+            <hr>
+            <div class="tareas" id="tareas"></div>
+        </div>
+    </div>
+
+    <div class="base-formulario">
+        <form action="" method="post">
+            <input type="text" id="tarea" placeholder="Titulo">
+            <input type="text" id="tarea" placeholder="Descripcion">
+            <input type="date" id="tarea" placeholder="Fecha de inicio">
+            <input type="date" id="tarea" placeholder="Decha de finalizaciòn">
+            <input type="text" id="asignar" placeholder="Asignar columna">
+            <br>
+            <button type="submit" id="button">Agregar</button>
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
