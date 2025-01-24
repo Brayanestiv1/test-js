@@ -22,7 +22,7 @@ hr {
 
 .columna{
     width: 30vw;
-    height: 60vh;
+    height: 60vw;
     margin-top: 10px;
     text-align: center;
 }
@@ -56,11 +56,110 @@ hr {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    height: 25vh;
+    height: 20vh;
     margin: 0 auto;
     background-color: #000;
     text-align: center;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+.base-formulario input {
+    width: 20vw;
+    height: 2vh;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.base-formulario button {
+    width: 10vw;
+    height: 2vh;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    color: black;
+    font-weight: bold;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #000;
+    color: #f0f0f0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header button {
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.header button:hover {
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+.header button:active {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .columnas {
+        flex-direction: column;
+    }
+
+    .columna {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .columna1 {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .columna2 {
+        width: 80vw;
+        height: 40vw;
+        border-left: none;
+        border-right: none;
+    }
+
+    .columna3 {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .base-formulario {
+        width: 80vw;
+        height: 20vh;
+    }
+
+    .base-formulario input {
+        width: 70vw;
+    }
+
+    .base-formulario button {
+        width: 35vw;
+    }
+}
+
+.header button:focus {
+    outline: none;
+}
+
+.header button:active {
+    outline: none;
 }
 
