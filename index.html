@@ -1,48 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablero Kanban</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero Kanban - Momentum</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>Tablero Kanban</h1>
-        <button id="registro">registrar</button>
-        <button id="login">login</button>
-    </header>
-    <div class="columnas">
-        <div class="columna1" id="pendientes">
-            <h1>Pendientes</h1>
-            <hr>
-            <div class="tareas" id="tareas"></div>
-        </div>
-
-        <div class="columna2" id="enProceso">
-            <h1>En progreso</h1>
-            <hr>
-            <div class="tareas" id="tareas"></div>
-        </div>
-
-        <div class="columna3" id="completadas">
-            <h1>Completadas</h1>
-            <hr>
-            <div class="tareas" id="tareas"></div>
-        </div>
+  <header>
+    <h1>Tablero Kanban de Momentum</h1>
+    <div class="acciones-usuario">
+      <button id="loginBtn">Iniciar sesión</button>
+      <button id="registerBtn">Registrarse</button>
     </div>
-
-    <div class="base-formulario">
-        <form action="" method="post">
-            <input type="text" id="titulo" placeholder="Titulo">
-            <input type="text" id="descripcion" placeholder="Descripcion">
-            <input type="date" id="fechaIni" placeholder="Fecha de inicio">
-            <input type="date" id="fechaFin" placeholder="Decha de finalizaciòn">
-            <input type="text" id="asignar" placeholder="Asignar columna">
-            <br>
-            <button type="submit" id="button">Agregar</button>
-        </form>
+  </header>
+  <button class="btn-agregar-tarea" id="addTaskBtn">Agregar tarea</button>
+  <div id="tablero-kanban">
+    <div class="columna" id="pendientes">
+      <h2>Pendientes</h2>
+      <div id="tareas-pendientes"></div>
+      
     </div>
+    <div class="columna" id="en-progreso">
+      <h2>En Progreso</h2>
+      <div id="tareas-en-progreso"></div>
+    </div>
+    <div class="columna" id="completadas">
+      <h2>Completadas</h2>
+      <div id="tareas-completadas"></div>
+    </div>
+  </div>
+
+  <div id="modal-tarea" class="modal">
+    <div class="contenido-modal">
+      <span class="btn-cerrar" id="closeModalBtn">&times;</span>
+      <h2>Crear/Editar tarea</h2>
+      <form id="formulario-tarea">
+        <input type="text" id="titulo-tarea" placeholder="Título" required>
+        <textarea id="descripcion-tarea" placeholder="Descripción" required></textarea>
+        <input type="date" id="fecha-inicio" required>
+        <input type="date" id="fecha-fin" required>
+        <select id="columna-tarea" required>
+          <option value="pendientes">Pendientes</option>
+          <option value="en-progreso">En Progreso</option>
+          <option value="completadas">Completadas</option>
+        </select>
+        <button type="submit">Guardar tarea</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="contenido-modal">
+      <span class="btn-cerrar" id="closeRegisterModal">&times;</span>
+      <h2>Registro</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Nombre de usuario" required>
+        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Inicio de Sesión -->
+  <div id="loginModal" class="modal">
+    <div class="contenido-modal">
+      <span class="btn-cerrar" id="closeLoginModal">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Nombre de usuario" required>
+        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
